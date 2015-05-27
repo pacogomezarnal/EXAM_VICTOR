@@ -6,12 +6,10 @@ import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
-import java.awt.CardLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class VentanaEquipo extends JPanel {
-	private JPanel VentanaUsuario,VentanaComprobacion;
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -22,7 +20,8 @@ public class VentanaEquipo extends JPanel {
 	//Constructor del JPanel
 	
 	public VentanaEquipo() {
-		setLayout(null);
+		
+		
 		
 		JLabel lblNewLabel = new JLabel("Equipo");
 		lblNewLabel.setBounds(10, 31, 46, 14);
@@ -87,6 +86,7 @@ public class VentanaEquipo extends JPanel {
 		JButton btnSiguiente = new JButton("Siguiente >>");
 		btnSiguiente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 				VentanaComprobacion VentanaComprobar = new VentanaComprobacion();
 				VentanaComprobar.show();
 			}

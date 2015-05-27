@@ -1,7 +1,6 @@
 package Vista;
 
 import javax.swing.JPanel;
-import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.ImageIcon;
@@ -10,11 +9,12 @@ import javax.swing.JButton;
 import modelos.Cadete;
 
 import java.awt.CardLayout;
-import java.awt.Container;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class VentanaUsuario extends JPanel {
+	
+	
 
 	private JPanel VentanaEquipo;
 	private JTextField textField;
@@ -30,10 +30,8 @@ public class VentanaUsuario extends JPanel {
 	//Constructor del JPanel
 	
 	public VentanaUsuario() {
-		setLayout(null);
-		
-		String consulta = "SELECT * FROM cadetes WHERE id=3 ;";
-		
+		Cadete cd = new Cadete();
+	
 		//rellenamos las ventanas con lo que queremos tener visible
 		
 		JLabel lblNombre = new JLabel("Nombre");
@@ -44,8 +42,10 @@ public class VentanaUsuario extends JPanel {
 		textField = new JTextField();
 		textField.setEditable(false);
 		textField.setBounds(243, 31, 86, 20);
-		add(textField);		
+		add(textField);
 		textField.setColumns(10);
+		String nombre = cd.getNombre();
+		textField.setText(nombre);
 		
 		JLabel lblApellidos = new JLabel("Apellidos");
 		lblApellidos.setBounds(243, 68, 46, 14);
@@ -56,6 +56,7 @@ public class VentanaUsuario extends JPanel {
 		textField_1.setBounds(243, 93, 86, 20);
 		add(textField_1);
 		textField_1.setColumns(10);
+		
 		
 		JLabel lblEdad = new JLabel("Edad");
 		lblEdad.setBounds(243, 120, 46, 14);
@@ -98,8 +99,8 @@ public class VentanaUsuario extends JPanel {
 		btnSiguiente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				JPanel VE = new VentanaEquipo();
-				VE.show();
+				CardLayout layout = (CardLayout) getVentanaEquipo().getLayout();
+				layout.show(VentanaEquipo, "Usuario");
 				
 			}
 		});
@@ -107,5 +108,13 @@ public class VentanaUsuario extends JPanel {
 		add(btnSiguiente);
 		
 
+	}
+
+	public JPanel getVentanaEquipo() {
+		return VentanaEquipo;
+	}
+
+	public void setVentanaEquipo(JPanel ventanaEquipo) {
+		VentanaEquipo = ventanaEquipo;
 	}
 }
