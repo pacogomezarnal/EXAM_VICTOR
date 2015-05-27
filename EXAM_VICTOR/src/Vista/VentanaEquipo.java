@@ -21,8 +21,9 @@ public class VentanaEquipo extends JPanel {
 	
 	public VentanaEquipo() {
 		
-		
-		
+		setLayout(null);
+		//rellenamos las ventanas con lo que queremos tener visible
+		//Creamos las etiquetas(Jlabel)con sus respectivos jtextfield y JButton para poder pasar a la siguiente ventana
 		JLabel lblNewLabel = new JLabel("Equipo");
 		lblNewLabel.setBounds(10, 31, 46, 14);
 		add(lblNewLabel);

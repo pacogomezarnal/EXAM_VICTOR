@@ -12,7 +12,7 @@ public class VentanaPrincipal extends JFrame {
 
 	private JPanel contentPane;
 
-	//Constructor del JFrame
+	//Constructor del JFrame y mostraremos la primera pantalla
 	
 	public VentanaPrincipal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

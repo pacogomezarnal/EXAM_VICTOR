@@ -17,6 +17,9 @@ public class VentanaComprobacion extends JPanel {
 	//Constructor del JPanel
 	
 	public VentanaComprobacion() {
+		
+		//rellenamos las ventanas con lo que queremos tener visible
+		//Creamos las etiquetas(Jlabel)con sus respectivos jtextfield y JButton para poder pasar a la siguiente ventana
 		setLayout(null);
 		
 		JLabel lblId = new JLabel("Id");

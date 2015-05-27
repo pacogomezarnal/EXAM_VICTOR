@@ -31,8 +31,9 @@ public class VentanaUsuario extends JPanel {
 	
 	public VentanaUsuario() {
 		Cadete cd = new Cadete();
-	
+		setLayout(null);
 		//rellenamos las ventanas con lo que queremos tener visible
+		//Creamos las etiquetas(Jlabel)con sus respectivos jtextfield y JButton para poder pasar a la siguiente ventana
 		
 		JLabel lblNombre = new JLabel("Nombre");
 		lblNombre.setBounds(243, 11, 46, 14);
