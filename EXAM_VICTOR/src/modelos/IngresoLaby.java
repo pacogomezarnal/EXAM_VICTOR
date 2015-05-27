@@ -8,7 +8,7 @@ import java.sql.Statement;
 //Clase que comprueba el codigo de entrada
 public class IngresoLaby {
 	//CONSULTA A LA BASE DE DATOS
-	private final static String CHECK_SEL="SELECT cod FROM cod WHERE id=";
+	private final static String CHECK_SEL="SELECT cod FROM cod WHERE id=3";
 	private final static String COD_COL="cod";
 	
 	//Conexion

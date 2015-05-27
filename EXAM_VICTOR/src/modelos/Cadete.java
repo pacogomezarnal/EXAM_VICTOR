@@ -1,5 +1,6 @@
 package modelos;
 
+
 //Clase que almacenará todos los datos de un cadete
 public class Cadete {
 	//Propiedades
@@ -12,7 +13,7 @@ public class Cadete {
 
 	//Constructores
 	public Cadete() {
-		
+
 	}
 	
 	public Cadete(int id,
